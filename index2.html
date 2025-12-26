@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Kanit';
+            src: url('./Kanit/Kanit-Regular.ttf') format('truetype');
+        }
+        body {
+            background-color: rgb(192, 165, 255);
+            font-family: 'Kanit', sans-serif;
+        }
+        h1 {
+            color: cornsilk;
+            text-align: center;
+        }
+        #regis {
+            font-size: 40px;
+            color: cadetblue;
+        }
+        .input_name {
+            background-color: rgb(165, 165, 31);
+            border: 2px solid rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="regis">Register</h1>
+    <h1>xxx</h1>
+    ชื่อ: <input class="input_name" type="text" name="fname">
+    นามสกุล: <input type="text" name="lname"> <br>
+    เพศ:
+    <input type="radio" name="gender" value="male"> ชาย
+    <input type="radio" name="gender" value="female"> หญิง
+    <br>
+    อายุ: <input type="number" name="age" min="1" max="120"> <br>
+    งานอดิเรก:
+    <input type="checkbox" name="hobby" value="football"> ฟุตบอล
+    <input type="checkbox" name="hobby" value="basketball"> บาสเกตบอล
+    <input type="checkbox" name="hobby" value="reading"> อ่านหนังสือ
+    <br>
+    รายละเอียดเพิ่มเติม: <br>
+    <textarea name="details" rows="4" cols="50"></textarea> <br>
+    <input type="submit" value="Submit">
+</body>
+</html>
