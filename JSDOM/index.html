@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="gender" value="male" onchange="changender()"> Male 
+    <input type="radio" name="gender" value="female"> Female
+    <script>
+        function changender() {
+            //เลือก gender ทั้งหมด
+            let genders = document.querySelectorAll('input[name="gender"]');
+
+            //ดูว่าอันไหนมัน check
+            for(let i=0; i < genders.length; i++) {
+                if(genders[i].checked) {
+                    console.log("Gender selected: " + genders[i].value);
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</body>
+</html>
+
+<button onclick="userClick()">Click me </button>
+    <script>
+        function userClick() {
+            alert("Hello from JSDOM");
+        }
+        function divClick() {
+            alert("Hello from Div");
+        }
+        </script
+
+<body>
+    งานอดิเรก: 
+    <input type="checkbox" name="fname" value="ฟุตบอล"> ฟุตบอล
+    <input type="checkbox" name="fname" value="บาสเกตบอล"> บาสเกตบอล
+    <input type="checkbox" name="fname" value="ว่ายน้ำ" checked> ว่ายน้ำ
+    <script>
+        let inputs = document.querySelectorAll('input[type="checkbox"]');
+        console.log(inputs);
+        for(let i=0; i < inputs.length; i++) {
+            console.log(inputs[i].value);
+        }
+    </script>
+   ชื่อ: <input 
+    id="fname"
+    type="text"
+    name="fname"
+    value="ชื่อทดสอบ">   
+    นามสกุล: <input 
+    id="lname"
+    class="input"
+    type="text"
+    name="lname"
+    value="นามสกุลทดสอบ">
+    เบอร์โทร: <input 
+    id="phone"
+    class="input"
+    type="text"
+    name="phone"
+    value="0813618156">
