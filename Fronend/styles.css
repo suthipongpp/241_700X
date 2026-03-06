@@ -110,3 +110,21 @@ input[type="radio"], input[type="checkbox"] {
 .button:active {
     transform: translateY(0);
 }
+
+.message {
+    background-color: #555;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: none;
+}
+
+.message.success {
+    background-color: aquamarine;
+    display: block;
+}
+
+.message.danger {
+    background-color: rosybrown;
+    display: block;
+}
