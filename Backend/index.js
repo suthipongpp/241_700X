@@ -25,7 +25,7 @@ const initMySQL = async () => {
 app.get('/users', async (req, res) => {
     const results = await conn.query('SELECT * FROM users');
     res.json(results[0]);
-}) 
+})      
 
 const validateData = (userData) => {
     let errors = [];
@@ -48,18 +48,19 @@ const validateData = (userData) => {
         errors.push('กรุณากรอกคำอธิบาย');
     }
     return errors;
-}
-    
+}    
+
+
 app.post('/users', async (req, res) => {
     try {
     let user = req.body;
     const errors = validateData(user);
-    if (errors.length > 0) {
+    if (errors.length > 0){
         throw {
             message: 'กรุณากรอกข้อมูลให้ครบถ้วน',
             errors: errors
         }
-    } 
+    }
     const results = await conn.query('INSERT INTO users SET ?', user);
     console.log('results:', results);
     res.json({
@@ -72,7 +73,7 @@ app.post('/users', async (req, res) => {
         console.error('Error inserting user:', error);
         res.status(500).json({
             message: errorMessage,
-            errors: errors
+            errors: errors 
         });
     }
 })
@@ -135,8 +136,6 @@ app.get('/users', (req, res) => {
     res.json(users);
 });
 
-
-
 //path: = POST /user
 app.post('/user', (req, res) => {
     let user = req.body;
@@ -198,7 +197,6 @@ app.listen(port, async () => {
 
 
 
-
 /**ทำการ import โมดูล http
 const http = require('http');
 const host = 'localhost';
@@ -225,3 +223,4 @@ let counter = 1;*/
     PUT /user/:id => แก้ไขข้อมูลผู้ใช้ตาม id ที่บันทึก
     DELETE /user/:id => ลบผู้ใช้ตาม id ที่บันทึก
 */
+
